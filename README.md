@@ -52,6 +52,18 @@ python py_gui.py
 3. Click the load button to load data from an existing Excel file.
 4. Click the visualize button to create a bar chart of the age distribution of the data.
 
+
+## Main
+1. Run the `main.py` file:
+```bash
+python main.py
+```
+#### Changes Made to main.py
+* Added code to count the number of employed, unemployed, and other rows in the Excel sheet.
+* Created a bar plot of the employment status data using the matplotlib library.
+* Displayed the bar plot within the GUI using the FigureCanvasTkAgg class from matplotlib.backends.backend_tkagg.
+* Added a button to toggle between light and dark mode.
+* Added a separator to separate the insert data section from the data section in the GUI.
 ## Credits
 
 This program was created by [Mfundo Monchwe](https://github.com/Mfundo-debug).
