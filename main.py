@@ -24,16 +24,13 @@ def load_data():
 
     list_values = list(sheet.values)
     print(list_values)
-    tree = ttk.Treeview(root)
-    treeview = tree
-    tree = ttk.Treeview(root)
-    treeview = tree
-    for col_name in list_values[0]:
-        tree.insert("", tk.END, values=col_name)
-        treeview.heading(col_name, text=col_name)
+
+    col_names = list_values[0]
+    for i, col_name in enumerate(col_names):
+        treeview.heading(i, text=col_name)
 
     for value_tuple in list_values[1:]:
-        tree.insert("", tk.END, values=value_tuple)
+        treeview.insert("", tk.END, values=value_tuple)
 
 #insert row
 def insert_row():
