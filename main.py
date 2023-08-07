@@ -5,6 +5,9 @@ import openpyxl as xl
 from openpyxl import Workbook
 from tkinter import filedialog, messagebox, simpledialog
 from tkinter.ttk import Treeview
+import matplotlib.pyplot as plt
+import matplotlib.backends.backend_tkagg as tkagg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 #load the data
 def load_data():
@@ -58,6 +61,29 @@ def insert_row():
 
     #insert into treeview
     treeview.insert("", tk.END, values=(name, age, subscription_status, employment_status))
+
+    #count the number of employed and unemployed, and other stats and plot barplot
+    employment_count = {"Employed": 0, "Unemployed": 0,"Other":0}
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        if row[3] == "Employed":
+            employment_count["Employed"] += 1
+        elif row[3] == "Unemployed":
+            employment_count["Unemployed"] += 1
+        else:
+            employment_count["Other"] += 1
+    #create a barplot
+    labels = list(employment_count.keys())
+    values = list(employment_count.values())
+    plt.bar(labels, values)
+    plt.title("Employment Status Data")
+    plt.xlabel("Employment Status")
+    plt.ylabel("Count")
+    plt.show()
+    #display the plot within the GUI
+    canvas = FigureCanvasTkAgg(plt.gcf(), master=root)
+    canvas.draw()
+    canvas.get_tk_widget().grid(row=0, column=1, rowspan=2, padx=20, pady=10)
+    canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
     #clear the entries
     name_entry.delete(0, tk.END)
