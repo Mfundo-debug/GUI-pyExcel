@@ -1,0 +1,3 @@
+matplotlib == 3.7.2
+#tkinter is in-built function but you welcome to install
+openpyxl == 3.1.2
