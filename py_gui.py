@@ -93,18 +93,16 @@ submit_button.grid(row=5,columnspan=2,sticky="EW")
 #Add a dark mode and light mode
 def set_dark_mode():
     style.theme_use('clam')
-    root.configure(bg="#333")
-    form_frame.configure(bg="#333")
-    for widget in form_frame.winfo_children():
-        widget.configure(bg="#333",fg="#fff", insertbackground="#fff")
+    style.configure('TLabel',background="#000",foreground="#fff")
+    style.configure('TButton',background="#000",foreground="#fff")
+    style.configure('TEntry',background="#000",foreground="#fff",insertbackground="#fff")
     submit_button.configure(style="DarkButton.TButton")
 
 def set_light_mode():
     style.theme_use('clam')
-    root.configure(bg="#fff")
-    form_frame.configure(bg="#fff")
-    for widget in form_frame.winfo_children():
-        widget.configure(bg="#fff",fg="#000", insertbackground="#000")
+    style.configure("TLabel",background="#fff")
+    style.configure("TButton", background="#fff")
+    style.configure("TEntry",background="#fff")
     submit_button.configure(style="LightButton.TButton")
 
 #Add a menu to switch between dark and light mode
