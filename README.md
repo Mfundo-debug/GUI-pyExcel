@@ -14,56 +14,64 @@ The program is designed to be user-friendly and easy to use, with clear labels a
 
 ## Features
 
-- Data entry form with labels and entry fields for name, age, gender, and hobbies
-- Checkbox for agreeing to terms and conditions
-- Submit button to add data to Excel file
-- Dark mode and light mode
-- Load button to load data from existing Excel file
-- Treeview to display loaded data
-- Visualize button to create a bar chart of age distribution using matplotlib
+-   Data entry form with labels and entry fields for name, age, gender, and hobbies
+-   Checkbox for agreeing to terms and conditions
+-   Submit button to add data to Excel file
+-   Dark mode and light mode
+-   Load button to load data from existing Excel file
+-   Treeview to display loaded data
+-   Visualize button to create a bar chart of age distribution using matplotlib
 
 ## Requirements
 
-- Python 3.x
-- tkinter
-- openpyxl
-- matplotlib
+-   Python 3.x
+-   tkinter
+-   openpyxl
+-   matplotlib
 
 ## Installation
 
-1. Clone the repository:
-```bash
+1.  Clone the repository:
+
+``` bash
 git clone https://github.com/Mfundo-debug/GUI-pyExcel.git
 ```
 
-2. Install the required packages:
-```bash 
+2.  Install the required packages:
+
+``` python
 pip install -r requirements.txt
 ```
 
 ## Usage
 
-1. Run the `pygui.py` file:
-```bash
+1.  Run the `pygui.py` file:
+
+``` python
 python py_gui.py
 ```
 
-2. Fill out the data entry form and click the submit button to add data to the Excel file.
-3. Click the load button to load data from an existing Excel file.
-4. Click the visualize button to create a bar chart of the age distribution of the data.
-
+2.  Fill out the data entry form and click the submit button to add data to the Excel file.
+3.  Click the load button to load data from an existing Excel file.
+4.  Click the visualize button to create a bar chart of the age distribution of the data.
 
 ## Main
-1. Run the `main.py` file:
-```bash
+
+1.  Run the `main.py` file:
+
+``` python
 python main.py
 ```
+
 #### Changes Made to main.py
-* Added code to count the number of employed, unemployed, and other rows in the Excel sheet.
-* Created a bar plot of the employment status data using the matplotlib library.
-* Displayed the bar plot within the GUI using the FigureCanvasTkAgg class from matplotlib.backends.backend_tkagg.
-* Added a button to toggle between light and dark mode.
-* Added a separator to separate the insert data section from the data section in the GUI.
+
+-   Added code to count the number of employed, unemployed, and other rows in the Excel sheet.
+-   Created a bar plot of the employment status data using the matplotlib library.
+-   Displayed the bar plot within the GUI using the FigureCanvasTkAgg class from matplotlib.backends.backend_tkagg.
+-   Added a button to toggle between light and dark mode.
+-   Added a separator to separate the insert data section from the data section in the GUI.
+-   Access to themes used please 👉[click here](https://github.com/rdbende/Forest-ttk-theme)
+
 ## Credits
 
 This program was created by [Mfundo Monchwe](https://github.com/Mfundo-debug).
