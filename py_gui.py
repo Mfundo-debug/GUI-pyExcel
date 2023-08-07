@@ -131,6 +131,11 @@ load_button.grid(row=6,columnspan=2,sticky="EW")
 data_tree = ttk.Treeview(display_frame)
 data_tree.pack()
 
+#Add a scrollbar to the treeview
+data_scroll = ttk.Scrollbar(display_frame,orient="vertical",command=data_tree.yview)
+data_scroll.pack(side="right",fill="y")
+data_tree.configure(yscrollcommand=data_scroll.set)
+
 #add visualisation to the data
 def visualise_data():
     import matplotlib.pyplot as plt
